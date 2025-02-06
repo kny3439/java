@@ -1,0 +1,22 @@
+package thread.ex01;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// 메인 쓰레드
+		
+		ThreadTest th=new ThreadTest();
+		
+		Thread thread=new Thread(th,"A");
+		thread.start();
+		
+		try {
+			thread.sleep(5000);
+			System.out.println("메인 쓰레드 종료");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}
